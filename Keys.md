@@ -116,7 +116,7 @@ nodes.json
 
 
 ### nodes[]
-  - 0
+  - node_name
     - url
       - service node url where file is stored
 
@@ -131,7 +131,7 @@ nodes.json
     - tariff
     - tags[]
 
-  - 1
+  - node_name
   - ...
 
 
@@ -238,20 +238,29 @@ files.json
 
 ### files
   - node url (service node URL where file is stored)
-    - filename1
-      - cipher
-        - 78oqf3hfyuf;ohf9qp43hgafgre (separate cipher for each file)
+    - /
+      - filename1
+        - cipher
+          - 78oqf3hfyuf;ohf9qp43hgafgre (separate cipher for each file)
 
-      - cipher-type
-        - salsa20
+        - cipher-type
+          - salsa20
 
-      - shadowname
-        - generated shadowname of the file (stored localy)
+        - shadowname
+          - generated shadowname of the file (stored localy)
 
-      - directory
-        -  
+        - directory
+          -  
 
-    - filename2 ...
+      - filename2 ...
+      - DIRECTORY
+        - filename3 ...
+        - filename4 ...
+        - DIR
+          - fn 5
+          - ...
+
+  - ...
 
 
 directory
@@ -287,12 +296,12 @@ my-nodes.json
 
 
 ### my-nodes
-  - URL
+  - node_name
     - shadowname
       - users shadowname (for this current node)
 
-  - URL
-  - URL
+  - node_name
+  - node_name
 
 Blockchain RPC (local)
 ======================
