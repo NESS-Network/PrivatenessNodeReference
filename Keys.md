@@ -116,7 +116,7 @@ nodes.json
 
 
 ### nodes[]
-  - 0
+  - node_name
     - url
       - service node url where file is stored
 
@@ -131,7 +131,7 @@ nodes.json
     - tariff
     - tags[]
 
-  - 1
+  - node_name
   - ...
 
 
@@ -238,20 +238,30 @@ files.json
 
 ### files
   - node url (service node URL where file is stored)
-    - filename1
+    - shadowname
+      - filename
       - cipher
         - 78oqf3hfyuf;ohf9qp43hgafgre (separate cipher for each file)
 
       - cipher-type
         - salsa20
 
-      - shadowname
-        - generated shadowname of the file (stored localy)
+      - status
+        - c created
+        - e encryptiong
+        - u uploading
+        - n on service node
+        - w downloading
+        - d decrypting
 
       - directory
-        -  
+        - directory ID
+          - Directory ID from directories.json
 
-    - filename2 ...
+      - source
+        - Full source file path
+
+    - ...
 
 
 directory
@@ -287,12 +297,12 @@ my-nodes.json
 
 
 ### my-nodes
-  - URL
+  - node_name
     - shadowname
       - users shadowname (for this current node)
 
-  - URL
-  - URL
+  - node_name
+  - node_name
 
 Blockchain RPC (local)
 ======================
@@ -318,6 +328,42 @@ blockchain-rpc.json
 ### rpc-user
 
 ### rpc-password
+
+Directories (local)
+===================
+
+directory
+---------
+
+### ~/.privateness-keys
+
+
+directories.json
+----------------
+
+### filedata
+  - vendor
+    - Privateness
+
+  - type
+    - service
+
+  - for
+    - files-directories
+
+
+### directories
+  - node url (service node URL where file is stored)
+    - id
+      - name
+      - parent
+        - parent ID
+
+    - ...
+
+
+### current
+  - Current directory ID (default 0)
 
 
 Tasks
