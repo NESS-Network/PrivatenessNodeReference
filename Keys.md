@@ -238,14 +238,22 @@ files.json
 
 ### files
   - node url (service node URL where file is stored)
+<<<<<<< HEAD
     - shadowname
       - filename
       - cipher
         - 78oqf3hfyuf;ohf9qp43hgafgre (separate cipher for each file)
+=======
+    - /
+      - filename1
+        - cipher
+          - 78oqf3hfyuf;ohf9qp43hgafgre (separate cipher for each file)
+>>>>>>> edd41fe213e7c9b1b1ff36df9605230fc497e20f
 
-      - cipher-type
-        - salsa20
+        - cipher-type
+          - salsa20
 
+<<<<<<< HEAD
       - status
         - c created
         - e encryptiong
@@ -262,6 +270,23 @@ files.json
         - Full source file path
 
     - ...
+=======
+        - shadowname
+          - generated shadowname of the file (stored localy)
+
+        - directory
+          -  
+
+      - filename2 ...
+      - DIRECTORY
+        - filename3 ...
+        - filename4 ...
+        - DIR
+          - fn 5
+          - ...
+
+  - ...
+>>>>>>> edd41fe213e7c9b1b1ff36df9605230fc497e20f
 
 
 directory
